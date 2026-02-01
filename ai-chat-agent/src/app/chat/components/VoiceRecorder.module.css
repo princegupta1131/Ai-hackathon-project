@@ -1,0 +1,131 @@
+/**
+ * @description Voice recorder component styles
+ */
+
+.recordButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.recordButton:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+}
+
+.recordButton svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-primary);
+}
+
+.recordingContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 24px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.recordingIndicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.recordingDot {
+    width: 8px;
+    height: 8px;
+    background: var(--danger);
+    border-radius: 50%;
+    animation: blink 1s ease-in-out infinite;
+}
+
+.duration {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
+}
+
+.recordingActions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cancelButton,
+.stopButton {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.cancelButton {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.cancelButton:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.cancelButton svg {
+    width: 16px;
+    height: 16px;
+    color: var(--text-primary);
+}
+
+.stopButton {
+    background: var(--danger);
+}
+
+.stopButton:hover {
+    background: #dc2626;
+    transform: scale(1.05);
+}
+
+.stopButton svg {
+    width: 16px;
+    height: 16px;
+    color: white;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}

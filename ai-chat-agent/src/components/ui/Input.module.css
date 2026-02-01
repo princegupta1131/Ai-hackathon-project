@@ -1,0 +1,101 @@
+/**
+ * @description Input component styles with glassmorphism design
+ */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-left: 0.25rem;
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(10px);
+}
+
+.input::placeholder {
+    color: var(--text-muted);
+}
+
+.input:focus {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.input:hover:not(:focus) {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* With icons */
+.inputWrapper .leftIcon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.inputWrapper .rightIcon {
+    position: absolute;
+    right: 1rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+}
+
+.inputWrapper .leftIcon+.input {
+    padding-left: 2.75rem;
+}
+
+.inputWrapper .input:has(+ .rightIcon) {
+    padding-right: 2.75rem;
+}
+
+/* Error state */
+.hasError .input {
+    border-color: var(--danger);
+    background: rgba(239, 68, 68, 0.05);
+}
+
+.hasError .input:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.error {
+    font-size: 0.75rem;
+    color: var(--danger);
+    margin-left: 0.25rem;
+}
+
+.helper {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-left: 0.25rem;
+}

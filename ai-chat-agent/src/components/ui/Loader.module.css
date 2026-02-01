@@ -1,0 +1,60 @@
+/**
+ * @description Loader component styles
+ */
+
+.loader {
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--primary);
+    animation: spin 1s linear infinite;
+}
+
+.sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 2px;
+}
+
+.md {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-width: 3px;
+}
+
+.lg {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-width: 4px;
+}
+
+.fullPage {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+    z-index: 9999;
+}
+
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
